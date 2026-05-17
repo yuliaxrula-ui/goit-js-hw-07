@@ -30,7 +30,7 @@ const images = [
 
 // Окрема функція для створення розмітки одного елемента (щоб використовувати повторно)
 const createGalleryItemMarkup = pictureInfo => {
-  return `<li><img src="${pictureInfo.url}" alt="${pictureInfo.alt}" width="300"></li>`;
+  return `<li><img src="${pictureInfo.url}" alt="${pictureInfo.alt}"></li>`;
 };
 
 const gallery = document.querySelector(".gallery");
