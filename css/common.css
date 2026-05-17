@@ -14,7 +14,58 @@ body {
 }
 
 /* ==========================================================================
-   СТИЛІ ДЛЯ ГАЛЕРЕЇ (Task 2 / Gallery)
+   СТИЛІ ДЛЯ СПИСКУ КАТЕГОРІЙ (Task 1 - Categories)
+   ========================================================================== */
+
+/* Головний контейнер ul#categories */
+#categories {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 392px;
+}
+
+/* Велика картка кожної категорії (li.item) */
+#categories .item {
+    background-color: #f6f6fe;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+#categories h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 24px;
+    color: #212121;
+}
+
+/* Внутрішній список ul*/
+#categories .item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Кожен окремий елемент списку */
+#categories .item li {
+    display: block;
+    background-color: #ffffff;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #212121;
+}
+
+/* ==========================================================================
+   СТИЛІ ДЛЯ ГАЛЕРЕЇ (Task 2 - Gallery)
    ========================================================================== */
 
 /* Стилізуємо сам контейнер ul.gallery */
@@ -26,7 +77,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 24px;
+    gap: 16px;
 }
 
 .gallery li {
@@ -40,4 +91,195 @@ body {
     width: 360px;
     height: 300px;
     object-fit: cover;
+}
+
+/* ==========================================================================
+   СТИЛІ ДЛЯ ФОРМИ ВХОДУ (Task 4 - Login Form)
+   ========================================================================== */
+
+/* Сама форма */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 408px;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin: 0 auto;
+}
+
+/* Обгортки */
+.login-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* Відступ між текстом підпису та самим полем */
+    font-weight: 400;
+    font-size: 16px;
+    color: #212121;
+}
+
+/* Поля введення */
+.login-form input {
+    width: 100%;
+    padding: 8px 16px;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Ефект при кліку на інпут */
+.login-form input:focus {
+    border-color: #4e75ff;
+}
+
+/* Кнопка (button) */
+.login-form button {
+    align-self: flex-start;
+    padding: 8px 20px;
+    background-color: #4e75ff;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+/* Наведення на кнопку */
+.login-form button:hover {
+    background-color: #6c8cff;
+}
+
+/* ==========================================================================
+   СТИЛІ ДЛЯ ВІДЖЕТА ЗМІНИ КОЛЬОРУ (Task 5 - Color Widget)
+   ========================================================================= */
+
+/* Контейнер віджета */
+.widget {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+
+    width: 100%;
+    max-width: 345px;
+    background-color: #ffffff;
+    padding: 100px 88px;
+    border-radius: 8px;
+
+    border: 1px solid #e0e0e0;
+    /* Легка рамка, щоб картку було видно на будь-якому тлі */
+    margin: 0 auto;
+}
+
+/* Текст всередині віджета */
+.widget p {
+    margin: 0;
+    font-size: 16px;
+    color: #212121;
+    font-family: sans-serif;
+}
+
+/* Кнопка зміни кольору */
+.widget .change-color {
+    padding: 8px 16px;
+    background-color: #4e75ff;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+/* Ефект наведення на кнопку */
+.widget .change-color:hover {
+    background-color: #6c8cff;
+}
+
+/* ==========================================================================
+   СТИЛІ ДЛЯ СТВОРЕННЯ КВАДРАТІВ (Task 6 - Boxes Layout)
+   ========================================================================== */
+
+/* Верхня панель з інпутом та кнопками */
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    width: 100%;
+    max-width: 534px;
+    background-color: #f6f6fe;
+    padding: 24px;
+    border-radius: 8px;
+    margin: 0 auto 16px auto;
+}
+
+/* Поле введення числа */
+#controls input {
+    width: 150px;
+    padding: 8px;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+}
+
+
+#controls button {
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+/* Синя кнопка Create */
+button[data-create] {
+    background-color: #4e75ff;
+}
+
+button[data-create]:hover {
+    background-color: #6c8cff;
+}
+
+/* Червона кнопка Destroy */
+button[data-destroy] {
+    background-color: #ff4e4e;
+}
+
+button[data-destroy]:hover {
+    background-color: #ff6c6c;
+}
+
+/* Нижня панель, куди з'являються квадрати */
+#boxes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px;
+
+    width: 100%;
+    max-width: 534px;
+    /* Така ж ширина, як у верхньої панелі */
+    min-height: 150px;
+    /* Мінімальна висота, щоб порожній блок не схлопувався */
+    background-color: #f6f6fe;
+    padding: 24px;
+    border-radius: 8px;
+    margin: 0 auto;
 }
