@@ -227,7 +227,7 @@ body {
 
 /* Поле введення числа */
 #controls input {
-    width: 150px;
+    width: 200px;
     padding: 8px;
     border: 1px solid #808080;
     border-radius: 4px;
